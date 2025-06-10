@@ -1,5 +1,5 @@
 {
-  "name": "common-components-react",
+  "name": "mfe-common-components",
   "version": "1.0.0",
   "type": "module",
   "description": "",
@@ -10,24 +10,37 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "preview": "webpack serve --config webpack.config.cjs",
+    "build-preview": "webpack --config webpack.config.cjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.10.0",
   "dependencies": {
-    "common-resources": "link:../common-resources",
+    "mfe-common-resources": "file:../mfe-common-resources/mfe-common-resources-1.0.0.tgz",
     "react": "~18.2.0",
     "react-dom": "~18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.2",
     "@babel/preset-react": "^7.27.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-node-resolve": "^16.0.1",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
     "rollup": "^4.40.2",
-    "rollup-plugin-peer-deps-external": "^2.2.4"
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.89.2",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
   }
-} 
+}
