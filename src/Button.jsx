@@ -1,7 +1,7 @@
 import "mfe-common-resources/scss/main.scss";
 import React from "react";
 
-const Button = ({ children, variant, size, fullWidth, className = "", ...props }) => {
+const Button = ({ children, variant, size = "medium", fullWidth, className = "", ...props }) => {
   // Build CSS classes based on props
   let buttonClasses = ["btn"];
 
@@ -9,9 +9,8 @@ const Button = ({ children, variant, size, fullWidth, className = "", ...props }
     buttonClasses.push(`btn--${variant}`);
   }
 
-  if (size) {
-    buttonClasses.push(`btn--${size}`);
-  }
+  // Always add size class (defaults to medium)
+  buttonClasses.push(`btn--${size}`);
 
   if (fullWidth) {
     buttonClasses.push("btn--full-width");
